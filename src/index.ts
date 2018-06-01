@@ -41,7 +41,7 @@ export class StoreSnapshot<State extends object> implements Store<State> {
 }
 
 export class StoreDefinition<State extends object> implements Store<State> {
-  private store: StoreSnapshot<State>
+  public store: StoreSnapshot<State>
   private alls: Emitter<Undux<State>> = new Emitter
   private emitter: Emitter<State> = new Emitter
   private setters: {
